@@ -9,7 +9,7 @@
 	LD R0,ITEM2		    ;load the ITEM2 into R0
 	JSR PUSH
 	LD R0,ITEM3		    ;load the ITEM3 into R0
-	
+	JSR PUSH
 	JSR POP				;POP ITEM3 INTO R0
 
     HALT
