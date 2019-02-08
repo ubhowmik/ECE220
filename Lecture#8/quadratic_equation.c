@@ -19,8 +19,8 @@ int main()
 
     if (D > 0)                   /* two real roots exist */
     {
-        x1 = (-b + sqrtf(D)) / (2 * a);
-        x2 = (-b - sqrtf(D)) / (2 * a);
+        x1 = (-b + sqrt(D)) / (2 * a);
+        x2 = (-b - sqrt(D)) / (2 * a);
     }
     else if (D == 0)             /* only one root exists */
         x1 = -b / (2 * a);
