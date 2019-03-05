@@ -5,7 +5,7 @@ int main()
 	int array[] = {35,97,19,4,57,27,36};
 
 	//sort array in ascending order
-	int i, j, temp
+	int i, j, temp;
         for(i=1;i<SIZE;i++)
 	{
 		temp = array[i];
@@ -15,8 +15,8 @@ int main()
 			{
 				//shift element to the right
 				array[j+1] = array[j];
-				//update empty position 
-				//(i.e. swap)
+				//update empty position
+				//insert at the proper location
 				array[j] = temp;
 			}
 		}
@@ -31,5 +31,4 @@ int main()
  
 	return 0;
 }
-
 
