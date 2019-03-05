@@ -1,26 +1,22 @@
 #include <stdio.h>
-#define SIZE 7
+#define SIZE 8
 int main()
 {
-	int array[] = {35,97,19,4,57,27,36};
+	int array[] = {6,5,3,1,8,7,2,4};
 
 	//sort array in ascending order
 	int i, j, temp;
         for(i=1;i<SIZE;i++)
 	{
 		temp = array[i];
-		for(j=i-1;j>=0;j--)
+		for(j=i-1;(j>=0 && (temp < array[j]));j--)
 		{
-			if(temp < array[j])
-			{
 				//shift element to the right
 				array[j+1] = array[j];
-				//update empty position
-				//insert at the proper location
-				array[j] = temp;
-			}
-		}
-		
+		}		
+		//insert at the proper location
+		array[j+1] = temp;
+					
 	}
 
 	printf("sorted array: \n");

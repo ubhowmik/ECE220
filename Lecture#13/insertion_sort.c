@@ -1,11 +1,11 @@
 #include <stdio.h>
-#define SIZE 8
+#define SIZE 7
 int main()
 {
-	int array[] = {6,5,3,1,8,7,2,4};
+	int array[] = {35,97,19,4,57,27,36};
 
 	//sort array in ascending order
-	int i, j, temp, empty = 0;
+	int i, j, temp;
         for(i=1;i<SIZE;i++)
 	{
 		temp = array[i];
@@ -16,11 +16,11 @@ int main()
 				//shift element to the right
 				array[j+1] = array[j];
 				//update empty position
-				empty = j;
+				//insert at the proper location
+				array[j] = temp;
 			}
 		}
-		//insert at the proper location
-		array[empty] = temp;
+		
 	}
 
 	printf("sorted array: \n");
