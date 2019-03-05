@@ -1,8 +1,8 @@
 #include <stdio.h>
-#define SIZE 5
+#define SIZE 8
 int main()
 {
-	int array[] = {7,4,6,3,1};
+	int array[] = {6,5,3,1,8,7,2,4};
 
 	//sort array in ascending order
 	int i, j, temp, empty = 0;
@@ -31,3 +31,4 @@ int main()
  
 	return 0;
 }
+
