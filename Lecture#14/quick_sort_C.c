@@ -8,7 +8,7 @@ void quicksort(int number[25],int first,int last){
       j=last;
 
       while(i<j){
-         while(number[i]<=number[pivot]&&i<last)
+         while(number[i]<=number[pivot])
             i++;
          while(number[j]>number[pivot])
             j--;
