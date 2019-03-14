@@ -1,0 +1,3 @@
+Hello!
+How are you? This is a test for the IO file read and write.
+This will will be read and copied into another file.
