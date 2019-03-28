@@ -17,17 +17,17 @@ int main()
 	for(i=0;i<200;i++)
 	{
 		(student_list+i)->NAME = (char *)malloc(100*sizeof(char));
-		strncpy((student_list+i)->NAME, "To be set”, 100);
+		strcpy((student_list+i)->NAME, "To be set");
 		(student_list+i)->UIN = -1;
 		(student_list+i)->GPA = 0.0;
 	}
 	printf("student_list pointer %p\n",student_list);
 	
-	student *new_student_list = (student *)realloc(student_list, 400*sizeof(student));
+	student *new_student_list = realloc(student_list, 400*sizeof(student));
 	for(i=200;i<400;i++)
         {
                 (new_student_list+i)->NAME = (char *)malloc(100*sizeof(char));
-                strncpy((new_student_list+i)->NAME, "To be set”, 100);
+                strcpy((new_student_list+i)->NAME, "To be set");
                 (new_student_list+i)->UIN = -1;
                 (new_student_list+i)->GPA = 0.0;
         }
