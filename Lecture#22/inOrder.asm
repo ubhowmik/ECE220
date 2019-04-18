@@ -34,7 +34,7 @@ LDR R2, R1, #1        ;load nd->left to R2
 ADD R6, R6, #-1
 STR R2, R6, #0        ;push nd->left to stack
 JSR INORDER
-ADD R6, R6, #2        ;stack tear down
+ADD R6, R6, #2  ;(left return);stack tear down
 ;printf("%c", nd->data);
 LDR R1, R5, #4
 LDR R0, R1, #0
@@ -45,7 +45,7 @@ LDR R3, R1, #2        ;load nd->right to R3
 ADD R6, R6, #-1       
 STR R3, R6, #0        ;push nd->right to stack
 JSR INORDER
-ADD R6, R6, #2        ;stack tear down
+ADD R6, R6, #2 ;(right return);stack tear down
 
 ;;Part 3 - tear down part of activation record (prepare to return)
 DONE
@@ -61,18 +61,4 @@ RET
 STACK .FILL x7000
 ND_VAL .FILL x6000
 
-;tree.asm
-.ORIG x6000
-.FILL x41
-.FILL x6003
-.FILL x6006
-.FILL x42
-.FILL x0
-.FILL x0
-.FILL x43
-.FILL x0
-.FILL x0
-.FILL x44
-.FILL x0
-.FILL x0
 .END
