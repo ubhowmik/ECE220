@@ -1,5 +1,6 @@
 #include <iostream>     // used for IO
 #include<cmath>
+
 using namespace std;    // creates textual container for
                         // variables and functions
 
@@ -34,7 +35,6 @@ vector vector::add(vector b) { // produce new vector by
 	double cy = ay+by;
 	c.length = sqrt(cx*cx+cy*cy);
 	c.angle = acos( cx/c.length );
-
 	return c;
 }
   
