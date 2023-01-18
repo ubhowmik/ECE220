@@ -1,0 +1,35 @@
+.ORIG x3000
+
+	
+
+	LEA R2, MY_STRING
+
+CHRLOOP	LDR R0, R2, #0
+	
+	BRz ALLDONE
+DPOLL	
+	LDI R1, DSR
+	
+	BRzp DPOLL
+	
+	STI R0, DDR
+	
+	ADD R2, R2, #1
+	
+	BRnzp CHRLOOP	
+
+ALLDONE
+	HALT
+	
+
+
+DSR	.FILL xFE04
+
+DDR	.FILL xFE06
+
+
+
+MY_STRING  .STRINGZ  "Hello, World!"
+
+
+.END
